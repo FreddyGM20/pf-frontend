@@ -25,10 +25,8 @@ const Login = () => {
       <input type="text" id="email" placeholder="tucorreo@dominio.com" className="input input-email" />
       <label htmlFor="password" className="label">Password</label>
       <input type="password" id="password" placeholder="********" className="input input-password" />
-      <button value="Iniciar sesion" className="primary-button login-button" onClick={()=>navigate("/home")}>Iniciar sesión</button>
-      <a href="/">Forgot my password</a>
+      <button value="Iniciar sesion" className="primary-button login-button" onClick={()=>navigate("/medic")}>Iniciar sesión</button>
     </form>
-    <button className="secundary-button  signup-button">Sign up</button>
   </div>
 </div>
 

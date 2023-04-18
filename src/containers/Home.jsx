@@ -7,7 +7,11 @@ import { Container } from '@mui/material'
 import { Box } from '@mui/material'
 import { Typography } from '@mui/material'
 import logo from '../images/pokemon.jpg'
+import { useNavigate } from "react-router-dom";
+
 function Home() {
+  const navigate = useNavigate();
+
   return (
     <Box>
         <NavBar/>
@@ -20,7 +24,7 @@ function Home() {
                         <Typography variant='h3' align='center' noWrap>Register</Typography>
                         <Typography mt={2} align="justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia quas, voluptatibus voluptas nam saepe inventore eum incidunt laborum at autem repellat, iure exercitationem molestiae magni architecto odit quos animi placeat.</Typography>
                         <Box textAlign={'center'} marginTop={'15px'}>
-                          <Button sx={{backgroundColor:'#00a2ff'}} variant='contained' size='large'>Registrarse</Button>
+                          <Button sx={{backgroundColor:'#00a2ff'}} variant='contained' size='large' onClick={()=>navigate("/chatbot")}>Registrarse</Button>
                         </Box>
                     </Grid>
                 </Grid>

@@ -67,7 +67,6 @@ function Diagnostico() {
                   )}
         </Grid>
     </Box>
-    <BtnChatBot/>
     </div>
   )
 }

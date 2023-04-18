@@ -37,6 +37,15 @@ function NavBar() {
     setAnchorElNav(null);
     navigate("/login")
   };
+  const NavigateChatBot = () => {
+    setAnchorElNav(null);
+    navigate("/chatbot")
+  };
+  const NavigateHome = () => {
+    setAnchorElNav(null);
+    navigate("/home")
+  };
+  
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
@@ -93,14 +102,11 @@ function NavBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-                <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem onClick={NavigateHome}>
                   <Typography textAlign="center">Inicio</Typography>
                 </MenuItem>
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">Publicaciones</Typography>
-                </MenuItem>
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">Acerca de</Typography>
+                <MenuItem onClick={NavigateChatBot}>
+                  <Typography textAlign="center">ChatBot</Typography>
                 </MenuItem>
             </Menu>
           </Box>
@@ -121,52 +127,21 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            DIAGVEN
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+            <Button onClick={NavigateHome} sx={{ my: 2, color: 'white', display: 'block' }}>
+                  Inicio
+            </Button>
+            <Button onClick={NavigateChatBot} sx={{ my: 2, color: 'white', display: 'block' }}>
+                  ChatBot
+            </Button>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-                <MenuItem onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">Perfil</Typography>
-                </MenuItem>
-                <MenuItem onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">Diagnostico</Typography>
-                </MenuItem>
-                <MenuItem onClick={NavigateLogin} to="/login">
-                  <Typography textAlign="center">Cerrar sesión</Typography>
-                </MenuItem>
-            </Menu>
+            <Button onClick={NavigateLogin} sx={{ my: 2, color: 'white', display: 'block' }}>
+                  Iniciar Sesión
+            </Button>
           </Box>
         </Toolbar>
       </Container>
