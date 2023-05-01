@@ -13,7 +13,7 @@
   }
   
   .chatBox::-webkit-scrollbar-thumb{
-    background: rgba(98,226,255,1);
+    background: #fff;
     width: 10px;
     border-radius: 20px;
   }
@@ -45,14 +45,17 @@
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-color: white;
+    box-shadow: 10px 10px 58px -25px rgba(0,0,0,0.75);
+    background-color: #fff;
   }
   
   #chat2{
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    background: linear-gradient(90deg, rgba(124,230,255,1) 0%, rgba(109,228,255,1) 35%, rgba(98,226,255,1) 100%);
+    background: #00a2ff;
+    box-shadow: 10px 10px 58px -25px rgba(0,0,0,0.75);
+
   }
   
   .btn:hover{

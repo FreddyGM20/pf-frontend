@@ -1,151 +1,29 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import { useNavigate } from "react-router-dom";
-import BtnChatBot from './BtnChatBot'
+import "../styles/navBar.scss"
+//import images
+import logoH  from "../assets/Logo con letras.png"
+import { Link, useNavigate } from "react-router-dom";
 
-const pages = ['Inicio', 'Publicaciones', 'Acerca de'];
-const settings = ['Perfil', 'Diagnostico','Logout'];
 
-function NavBar() {
+const NavBar = () => {
   const navigate = useNavigate();
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-  const NavigateLogin = () => {
-    setAnchorElNav(null);
-    navigate("/login")
-  };
-  const NavigateChatBot = () => {
-    setAnchorElNav(null);
-    navigate("/chatbot")
-  };
-  const NavigateHome = () => {
-    setAnchorElNav(null);
-    navigate("/home")
-  };
-  
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
-    <AppBar position="sticky" sx={{backgroundColor: '#00a2ff'}}>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/home"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-                <MenuItem onClick={NavigateHome}>
-                  <Typography textAlign="center">Inicio</Typography>
-                </MenuItem>
-                <MenuItem onClick={NavigateChatBot}>
-                  <Typography textAlign="center">ChatBot</Typography>
-                </MenuItem>
-            </Menu>
-          </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            DIAGVEN
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            <Button onClick={NavigateHome} sx={{ my: 2, color: 'white', display: 'block' }}>
-                  Inicio
-            </Button>
-            <Button onClick={NavigateChatBot} sx={{ my: 2, color: 'white', display: 'block' }}>
-                  ChatBot
-            </Button>
-          </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Button onClick={NavigateLogin} sx={{ my: 2, color: 'white', display: 'block' }}>
-                  Iniciar Sesión
-            </Button>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <>
+      <header>
+        <nav className='container'>
+          <div className="logoNavBar">
+            <img src={logoH} alt="" onClick={()=> navigate('/')} />
+          </div>
+          <div className="buttonsNavBar">
+            <ol>
+              <Link to={'/'}>Inicio<div className="separe"></div></Link>
+              <Link to={'/chatbot'}>ChatBot<div className="separe"></div></Link>
+            </ol>
+            <button type='button' className='btn btn-primary' onClick={()=> navigate('/login')}>¡Soy medico!</button>
+          </div>
+        </nav>
+      </header>
+    </>
   );
 }
 export default NavBar;

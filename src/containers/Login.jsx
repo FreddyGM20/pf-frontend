@@ -1,36 +1,65 @@
-import React from 'react'
-import '../styles/Login.scss'
+import React from "react";
+import "../styles/Login.scss";
+import Header from "./NavBar"
 import { useNavigate } from "react-router-dom";
 
-const users =[{
-  email:"freddy@gmail.com",
-  contraseña:"123456",
-  isAdmin:false
-},
-{
-  email:"admin@gmail.com",
-  contraseña:"123456",
-  isAdmin:true
-}]
+const users = [
+  {
+    email: "freddy@gmail.com",
+    contraseña: "123456",
+    isAdmin: false,
+  },
+  {
+    email: "admin@gmail.com",
+    contraseña: "123456",
+    isAdmin: true,
+  },
+];
+
 
 const Login = () => {
   const navigate = useNavigate();
+  const navegador = false
 
   return (
-<div className="login">
-  <div className="form-container">
-    <img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
-    <form action="" className="form">
-      <label htmlFor="email" className="label">Email address</label>
-      <input type="text" id="email" placeholder="tucorreo@dominio.com" className="input input-email" />
-      <label htmlFor="password" className="label">Password</label>
-      <input type="password" id="password" placeholder="********" className="input input-password" />
-      <button value="Iniciar sesion" className="primary-button login-button" onClick={()=>navigate("/medic")}>Iniciar sesión</button>
-    </form>
-  </div>
-</div>
+    <>
+    <Header />
+      <div className="login">
+        <div className="BolaBg BolaLeft"></div>
+        <div className="form-container">
+          <img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
+          <form className="form">
+            <label htmlFor="email" className="label">
+              Email address
+            </label>
+            <input
+              type="text"
+              id="email"
+              placeholder="tucorreo@dominio.com"
+              className="input input-email"
+            />
+            <label htmlFor="password" className="label">
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              placeholder="********"
+              className="input input-password"
+            />
+            <button
+              value="Iniciar sesion"
+              className="primary-button login-button"
+              onClick={() => navigate('/medic')}
+            >
+              Iniciar sesión
+            </button>
+          </form>
+        </div>
+        <div className="BolaBg rigthBola"></div>
+      </div>
+    </>
+  );
+};
 
-  )
-}
-
-export default Login
+export default Login;
