@@ -183,7 +183,7 @@ function Medic() {
       setValue(newValue);
     };
   return (
-    <Box>
+    <Box sx={{marginTop:'110px'}}>
         <NavBarM/>
             <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
                 <Tabs value={value} onChange={handleChange} centered>
@@ -194,7 +194,7 @@ function Medic() {
                 <Grid container spacing={1} marginTop={2} justifyContent={'start'} padding={'8px'}>
                     {diagnostico.map((elem)=>
                     <TabPanel value={value} index={0}>
-                    <Card sx={{display:'flex', flexDirection:'row', width:320, borderRadius:'10px', BorderColor:'blue', padding:'8px',textAlign:'end'}}>
+                    <Card sx={{display:'flex', flexDirection:'row', width:320, borderRadius:'10px', BorderColor:'blue', padding:'8px',textAlign:'end'}} elevation={6}>
                         <CardContent>
                                 <Typography gutterBottom variant="h6" component="div" align='center'>
                                 Nombre: {elem.name}
