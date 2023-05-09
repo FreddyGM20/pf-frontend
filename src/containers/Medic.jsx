@@ -1,24 +1,13 @@
 import React from 'react'
 import NavBarM from './NavBarM'
-import PropTypes from 'prop-types';
-import { Box } from '@mui/material'
-import { Tabs } from '@mui/material'
-import { Tab } from '@mui/material'
-import { Typography } from '@mui/material'
-import { Container } from '@mui/material'
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import { Button, CardActionArea, CardActions } from '@mui/material';
-import { Grid } from '@mui/material';
-import { Modal } from '@mui/material';
-import { Paper } from '@mui/material';
-import { TextField } from '@mui/material';
-import SendIcon from '@mui/icons-material/Send';
+import "../styles/medic.scss"
+import { BsEyeFill } from "react-icons/bs";
 
 const diagnostico = [{
     "id":'214',
     "name":'Freddy Guete',
-    "estado":'revisado',
+    "estado":'Revisado',
+    "prioridad":false,
     "preguntas":[{
         "pregunta":"¿Qué tipo de servicio desea usar?",
         "respuesta":"Informacion sobre las enfermedades venereas"
@@ -65,7 +54,8 @@ const diagnostico = [{
 {
     "id":'214',
     "name":'Fabian Vargas',
-    "estado":'revisado',
+    "estado":'No revisado',
+    "prioridad":false,
     "preguntas":[{
         "pregunta":"hola?2",
         "respuesta":"siuuuu1"
@@ -84,7 +74,8 @@ const diagnostico = [{
 {
     "id":'214',
     "name":'Sharay Guete',
-    "estado":'revisado',
+    "estado":'No revisado',
+    "prioridad":false,
     "preguntas":[{
         "pregunta":"hola?2",
         "respuesta":"siuuuu1"
@@ -103,7 +94,8 @@ const diagnostico = [{
 {
     "id":'214',
     "name":'Ivonne Maldonado',
-    "estado":'revisado',
+    "estado":'Revisado',
+    "prioridad":false,
     "preguntas":[{
         "pregunta":"hola?2",
         "respuesta":"siuuuu1"
@@ -122,7 +114,1659 @@ const diagnostico = [{
 {
     "id":'214',
     "name":'Isabella Araque',
-    "estado":'revisado',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},{
+    "id":'214',
+    "name":'Freddy Guete',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+]
+},
+{
+    "id":'214',
+    "name":'Fabian Vargas',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Sharay Guete',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Ivonne Maldonado',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Isabella Araque',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},{
+    "id":'214',
+    "name":'Freddy Guete',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+]
+},
+{
+    "id":'214',
+    "name":'Fabian Vargas',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Sharay Guete',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Ivonne Maldonado',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Isabella Araque',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},{
+    "id":'214',
+    "name":'Freddy Guete',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+]
+},
+{
+    "id":'214',
+    "name":'Fabian Vargas',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Sharay Guete',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Ivonne Maldonado',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Isabella Araque',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},{
+    "id":'214',
+    "name":'Freddy Guete',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+]
+},
+{
+    "id":'214',
+    "name":'Fabian Vargas',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Sharay Guete',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Ivonne Maldonado',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Isabella Araque',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},{
+    "id":'214',
+    "name":'Freddy Guete',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+]
+},
+{
+    "id":'214',
+    "name":'Fabian Vargas',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Sharay Guete',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Ivonne Maldonado',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Isabella Araque',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},{
+    "id":'214',
+    "name":'Freddy Guete',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+]
+},
+{
+    "id":'214',
+    "name":'Fabian Vargas',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Sharay Guete',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Ivonne Maldonado',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Isabella Araque',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},{
+    "id":'214',
+    "name":'Freddy Guete',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+]
+},
+{
+    "id":'214',
+    "name":'Fabian Vargas',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Sharay Guete',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Ivonne Maldonado',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Isabella Araque',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},{
+    "id":'214',
+    "name":'Freddy Guete',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+]
+},
+{
+    "id":'214',
+    "name":'Fabian Vargas',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Sharay Guete',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Ivonne Maldonado',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Isabella Araque',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},{
+    "id":'214',
+    "name":'Freddy Guete',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+]
+},
+{
+    "id":'214',
+    "name":'Fabian Vargas',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Sharay Guete',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Ivonne Maldonado',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Isabella Araque',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},{
+    "id":'214',
+    "name":'Freddy Guete',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+]
+},
+{
+    "id":'214',
+    "name":'Fabian Vargas',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Sharay Guete',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Ivonne Maldonado',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Isabella Araque',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},{
+    "id":'214',
+    "name":'Freddy Guete',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+]
+},
+{
+    "id":'214',
+    "name":'Fabian Vargas',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Sharay Guete',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Ivonne Maldonado',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Isabella Araque',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},{
+    "id":'214',
+    "name":'Freddy Guete',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+]
+},
+{
+    "id":'214',
+    "name":'Fabian Vargas',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Sharay Guete',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Ivonne Maldonado',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Isabella Araque',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},{
+    "id":'214',
+    "name":'Freddy Guete',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    },{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+    ,{
+        "pregunta":"¿Qué tipo de servicio desea usar?",
+        "respuesta":"Informacion sobre las enfermedades venereas"
+    }
+]
+},
+{
+    "id":'214',
+    "name":'Fabian Vargas',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Sharay Guete',
+    "estado":'No revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Ivonne Maldonado',
+    "estado":'Revisado',
+    "prioridad":false,
+    "preguntas":[{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu1"
+    },{
+        "pregunta":"hola?2",
+        "respuesta":"siuuuu2"
+    },{
+        "pregunta":"hola?3",
+        "respuesta":"siuuuu3"
+    },{
+        "pregunta":"hola?4",
+        "respuesta":"siuuuu4"
+    },
+]
+},
+{
+    "id":'214',
+    "name":'Isabella Araque',
+    "estado":'Revisado',
+    "prioridad":false,
     "preguntas":[{
         "pregunta":"hola?2",
         "respuesta":"siuuuu1"
@@ -139,111 +1783,80 @@ const diagnostico = [{
 ]
 }]
 
-const prueba = diagnostico[0] 
 
-function TabPanel(props) {
-    const { children, value, index, ...other } = props;
-
-    return (
-      <div
-        role="tabpanel"
-        hidden={value !== index}
-        id={`simple-tabpanel-${index}`}
-        aria-labelledby={`simple-tab-${index}`}
-        {...other}
-      >
-        {value === index && (
-          <Box sx={{ p: 3 }}>
-            <Typography>{children}</Typography>
-          </Box>
-        )}
-      </div>
-    );
-  }
-  
-  TabPanel.propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.number.isRequired,
-    value: PropTypes.number.isRequired,
-  };
-  
-  function a11yProps(index) {
-    return {
-      id: `simple-tab-${index}`,
-      'aria-controls': `simple-tabpanel-${index}`,
-    };
-  }
 
 function Medic() {
-    const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
-    const [value, setValue] = React.useState(0);
-    const handleChange = (event, newValue) => {
-      setValue(newValue);
-    };
+    const revisados = diagnostico.filter(elem => elem.estado == 'Revisado')
+    const nrevisados = diagnostico.filter(elem => elem.estado == 'No revisado')
+    function Revisadop (verificador){
+        if(verificador){
+            return revisados.filter(elem => elem.prioridad == true)
+        }else{
+            return revisados.filter(elem => elem.prioridad == false)
+        }
+    }
   return (
-    <Box sx={{marginTop:'110px'}}>
-        <NavBarM/>
-            <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
-                <Tabs value={value} onChange={handleChange} centered>
-                    <Tab label="Revisado" />
-                    <Tab label="No Revisado" />
-                </Tabs>
-            </Box>
-                <Grid container spacing={1} marginTop={2} justifyContent={'start'} padding={'8px'}>
-                    {diagnostico.map((elem)=>
-                    <TabPanel value={value} index={0}>
-                    <Card sx={{display:'flex', flexDirection:'row', width:320, borderRadius:'10px', BorderColor:'blue', padding:'8px',textAlign:'end'}} elevation={6}>
-                        <CardContent>
-                                <Typography gutterBottom variant="h6" component="div" align='center'>
-                                Nombre: {elem.name}
-                                </Typography>
-                                <Typography variant="body2" align='center' color="text.secondary">
-                                {elem.estado}
-                                </Typography>
-                        </CardContent>
-                        <CardActions>
-                        <Button size="small" variant='contained' sx={{backgroundColor:'#00a2ff'}} onClick={handleOpen}>
-                            Ver
-                        </Button>
-                        </CardActions>
-                    </Card>
-                    </TabPanel>
-                        )}
+    <>
+    <NavBarM/>
+    <div className='MainMedic'>
+        <div className='container-medic'>
+            <div className='navbarList'>
+                <ul class="nav nav-underline navitem">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Revisado</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">No revisado</button>
+                    </li>
+                </ul>
+                <div className='dropdown'>
+                            <a class="btn btn-primary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Filtrar por</a>
 
-                                    <Modal open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
-                                       <Box sx={{
-                                        display:'flex',flexDirection:'column',position: 'absolute',top: '50%',left: '50%',transform: 'translate(-50%, -50%)',width: '80%',height:'80%',bgcolor: 'background.paper',boxShadow: 24,p: 4, borderRadius:'12px',  overflow: "hidden",overflowY: "scroll",}}>
-                                            <Typography id="modal-modal-title" variant="h6" component="h2" align='center' marginBottom={'20px'}>
-                                                Historial
-                                            </Typography>
-                                            {diagnostico[0].preguntas.map((elem)=> {
-                                            return (<Paper elevation={3} sx={{marginBottom:'15px'}}>
-                                                <Typography id="server-modal-description" sx={{ pt: 2 }} padding={'8px'}>
-                                                    Pregunta: {elem.pregunta}
-                                                </Typography>
-                                                <Typography  id="server-modal-description" sx={{ pt: 2 }} padding={'8px'}>
-                                                    Respuesta: {elem.respuesta}
-                                                </Typography>
-                                            </Paper>)
-                                            })}
-                                            <Grid container spacing={3} marginTop={2} position={'sticky'}>
-                                                <Grid item xs={11}>
-                                                    <Paper elevation={3}>
-                                                        <TextField required label="Diagnostico" multiline fullWidth variant='outlined'/>
-                                                    </Paper>
-                                                </Grid>
-                                                <Grid item xs={1} fullWidth alignSelf='center'>
-                                                    <Button variant="contained" endIcon={<SendIcon />}>
-                                                        Send
-                                                    </Button>
-                                                </Grid>
-                                            </Grid>
-                                        </Box>
-                                </Modal>
-                </Grid>
-    </Box>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" onClick={() => Revisadop(true)}>Prioridad</a></li>
+                                <li><a class="dropdown-item" onClick={() => Revisadop(false)}>Sin prioridad</a></li>
+                            </ul>
+                        </div>
+                <div class="container-tab tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab-priority" tabindex="0">
+                        <div className='cards'>
+                            {revisados.map((elem)=>
+                            <div className='content-card'>
+                                <div className='card'>
+                                <div className='card-izq'>
+                                        <h6>Nombre: {elem.name}</h6>
+                                        <p>{elem.estado}</p>
+                                </div>
+                                <div className='card-der'>
+                                        <button class='btn btn-primary'><BsEyeFill/></button>
+                                </div>
+                                </div>
+                            </div>
+                            )}
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                    <div className='cards'>
+                            {nrevisados.map((elem)=>
+                            <div className='content-card'>
+                                <div className='card'>
+                                <div className='card-izq'>
+                                        <h6>Nombre: {elem.name}</h6>
+                                        <p>{elem.estado}</p>
+                                </div>
+                                <div className='card-der'>
+                                        <button class='btn btn-primary'><BsEyeFill/></button>
+                                </div>
+                                </div>
+                            </div>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </>
   )
 }
 
