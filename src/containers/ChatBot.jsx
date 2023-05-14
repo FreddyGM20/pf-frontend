@@ -6,7 +6,7 @@ import "../styles/chatbot.css";
 import { Box } from "@mui/material";
 
 const ChatBot = () => {
-  const URL = "http://25.65.134.189:3000";
+  const URL = "http://25.78.142.190:3000";
   let [datosMessages, setdatosMessages] = useState([]);
   let [formData, setFormData] = useState({
     nombre: "",
