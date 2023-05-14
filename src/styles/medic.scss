@@ -46,7 +46,7 @@
         display: grid;
         grid-template-columns: auto;
         border-radius: 10px;
-        width: 90%;
+        width: 95%;
         min-height: calc(100vh - 214px);
         justify-content: center;
         align-items: start;
@@ -76,7 +76,7 @@
     }
     .cards{
         display: grid;
-        grid-template-columns: auto 1fr auto 1fr ;
+        grid-template-columns: auto auto auto auto ;
         width: 100%;
         align-items: center;
         justify-content: center;
@@ -84,17 +84,16 @@
     .content-card{
         display:flex;
         flex-direction:row;
-        justify-content: start;
+        justify-content: center;
         align-items: center;
-        width: 320px;
-        gap: 25px;
+        width: 100%;
         padding: 10px;
     }
 
     .card{
         display:flex;
         flex-direction:row;
-        width:320px;
+        width:80%;
         height: 105px;
         border-radius:10px;
         border-color:blue;
@@ -119,7 +118,14 @@
     li:hover{
         cursor:pointer;
     }
+}
+.container-modalmedic{
+    display: flex;
+    flex-direction: column;
     
+    background: #FFFFFF;
+    width: 80%;
+    height: 80%;
 }
 
 @keyframes fadein {

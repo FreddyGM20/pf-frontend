@@ -9,19 +9,28 @@ function Estadistica() {
     <NavBarM/>
     <main className='MainEstadistica'>
         <div className='container-estadistica'>
-            <div className='card-estadistica'>
-                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                <div className='imgG'>
-                    <img src={img1} alt="" />
+            <div className='container-hestadistica'>
+                <div className='card-hestadistica'>
+                    <iframe className='graficau' src="https://charts.mongodb.com/charts-project-0-hpwqy/embed/charts?id=2d9e5ab3-1a86-4338-bff8-ce5740737e46&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt inventore nobis ipsam et itaque. Rem dolores corrupti autem asperiores placeat consequuntur nostrum? Sunt inventore magni, quis perspiciatis omnis iure ea.</p>
+                <div className='card-hestadistica'>
+                    <iframe className='graficau' src="https://charts.mongodb.com/charts-project-0-hpwqy/embed/charts?id=64603317-c04b-4029-8a24-0eeea793ac1c&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+                </div>
+                <div className='card-hestadistica'>
+                    <iframe className='graficau' src="https://charts.mongodb.com/charts-project-0-hpwqy/embed/charts?id=d92d2c79-7ecb-4298-85a9-c31f68702dfc&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+                </div>
             </div>
-            <div className='card-estadistica'>
-                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                <div className='imgG'>
-                    <img src={img1} alt="" />
+            <div className='container-h2estadistica'>
+                <div className='card-estadistica'>
+                    <div className='imgG'>
+                        <iframe className='graficad' src="https://charts.mongodb.com/charts-project-0-hpwqy/embed/charts?id=64602fdf-6cd4-4222-8771-d817f431d652&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+                    </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt inventore nobis ipsam et itaque. Rem dolores corrupti autem asperiores placeat consequuntur nostrum? Sunt inventore magni, quis perspiciatis omnis iure ea.</p>
+                <div className='card-estadistica'>
+                    <div className='imgG'>
+                        <iframe className='graficad' src="https://charts.mongodb.com/charts-project-0-hpwqy/embed/charts?id=64603ef6-c04b-4989-869d-0eeea79b89cb&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
