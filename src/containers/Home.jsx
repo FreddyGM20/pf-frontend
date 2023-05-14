@@ -16,7 +16,10 @@ function Home() {
             <img src={logo} alt="" />
             <h1>Lorem ipsum dolor sit</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <button type='button' className='btn btn-primary' onClick={()=> navigate('/chatbot')}>¡Conversemos!</button>
+            <div className="buttons-login">
+              <button type='button' className='btn btn-primary' onClick={()=> navigate('/chatbot')}>¡Conversemos!</button>
+              <button type='button' className='btn btn-primary' onClick={()=> navigate('/informacion-ets')}>¡Aprendamos sobre ETS!</button>
+            </div>
           </div>
         </div>
       </main>

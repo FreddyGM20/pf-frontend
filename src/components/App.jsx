@@ -6,6 +6,7 @@ import Home from "../containers/Home";
 import Medic from "../containers/Medic";
 import ChatBot from "../containers/ChatBot";
 import Estadistica from "../containers/Estadistica";
+import ETS from "../containers/ETS"
 import "../styles/global.scss";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route element={<Medic />} path="/medic" />
           <Route element={<Login />} path="/login" />
           <Route element={<Admin />} path="/admin" />
+          <Route element={<ETS/>} path="/informacion-ets" />
           <Route element={<h1>Not found!</h1>} />
         </Routes>
       </BrowserRouter>

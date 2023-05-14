@@ -18,6 +18,7 @@ const NavBar = () => {
             <ol>
               <Link to={'/'}>Inicio<div className="separe"></div></Link>
               <Link to={'/chatbot'}>ChatBot<div className="separe"></div></Link>
+              <Link to={'/informacion-ets'}>Informacion ETS<div className="separe"></div></Link>
             </ol>
             <button type='button' className='btn btn-primary' onClick={()=> navigate('/login')}>¡Soy medico!</button>
           </div>
