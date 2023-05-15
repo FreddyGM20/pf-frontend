@@ -7,6 +7,10 @@ import { Link, useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const navigate = useNavigate();
+  function Logout(){
+    localStorage.clear()
+    navigate('/login')
+  }
   return (
     <>
       <header>
@@ -19,7 +23,7 @@ const NavBar = () => {
               <Link to={'/estadistica'}>Estadistica<div className="separe"></div></Link>
               <Link to={'/medic'}>Diagnosticos<div className="separe"></div></Link>
             </ol>
-            <button type='button' className='btn btn-primary' onClick={()=> navigate('/login')}>Cerrar sesión</button>
+            <button type='button' className='btn btn-primary' onClick={()=> Logout()}>Cerrar sesión</button>
           </div>
         </nav>
       </header>

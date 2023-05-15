@@ -17,7 +17,7 @@ function App() {
           <Route element={<Home />} path="/" />
           <Route element={<Estadistica />} path="/estadistica" />
           <Route element={<ChatBot />} path="/chatbot" />
-          <Route element={<Medic />} path="/medic" />
+          <Route element={<Medic />} path="/medic?" />
           <Route element={<Login />} path="/login" />
           <Route element={<Admin />} path="/admin" />
           <Route element={<ETS/>} path="/informacion-ets" />
