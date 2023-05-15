@@ -10,59 +10,6 @@ import { useParams } from "react-router-dom";
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 
-const prueba = {
-  id: "1",
-  name: "Freddy Guete",
-  estado: "Revisado",
-  prioridad: false,
-  preguntas: [
-    {
-      pregunta: "¿Qué tipo de servicio desea usar?",
-      respuesta: "Informacion sobre las enfermedades venereas",
-    },
-    {
-      pregunta: "¿Qué tipo de servicio desea usar?",
-      respuesta: "Informacion sobre las enfermedades venereas",
-    },
-    {
-      pregunta: "¿Qué tipo de servicio desea usar?",
-      respuesta: "Informacion sobre las enfermedades venereas",
-    },
-    {
-      pregunta: "¿Qué tipo de servicio desea usar?",
-      respuesta: "Informacion sobre las enfermedades venereas",
-    },
-    {
-      pregunta: "¿Qué tipo de servicio desea usar?",
-      respuesta: "Informacion sobre las enfermedades venereas",
-    },
-    {
-      pregunta: "¿Qué tipo de servicio desea usar?",
-      respuesta: "Informacion sobre las enfermedades venereas",
-    },
-    {
-      pregunta: "¿Qué tipo de servicio desea usar?",
-      respuesta: "Informacion sobre las enfermedades venereas",
-    },
-    {
-      pregunta: "¿Qué tipo de servicio desea usar?",
-      respuesta: "Informacion sobre las enfermedades venereas",
-    },
-    {
-      pregunta: "¿Qué tipo de servicio desea usar?",
-      respuesta: "Informacion sobre las enfermedades venereas",
-    },
-    {
-      pregunta: "¿Qué tipo de servicio desea usar?",
-      respuesta: "Informacion sobre las enfermedades venereas",
-    },
-    {
-      pregunta: "¿Qué tipo de servicio desea usar?",
-      respuesta: "Informacion sobre las enfermedades venereas",
-    },
-  ],
-};
-
 const style = {
   position: "absolute",
   top: "50%",
@@ -84,16 +31,31 @@ function Medic() {
   let [pacientes, setRpacientes] = useState([]);
   let [paciente, setPaciente] = useState({});
   let [historial, sethistorial] = useState([]);
+  const [openS, setopenS] = useState(false);
+  const [openE, setopenE] = useState(false);
+  const [error, setError] = useState();
+
+  const CloseS = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setopenS(false);
+  };
+  const CloseE = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setopenE(false);
+  };
 
   useEffect(() => {
     axios.get(`${URL}/medico/norevisado`).then((res) => {
       setNRpacientes(...npacientes, res.data.datos);
     });
 
-    axios
-      .post(
-        `${URL}/medico/revisado`,
-        {},
+    axios.post(`${URL}/medico/revisado`,{},
         {
           headers: {
             Authorization: `Basic ${token}`,
@@ -102,8 +64,11 @@ function Medic() {
       )
       .then((res) => {
         setRpacientes(...pacientes, res.data.datos);
+        console.log(pacientes)
       });
   }, []);
+  console.log("npacientes",npacientes)
+  console.log("pacientes",pacientes)
   const [open, setOpen] = React.useState(false);
   const handleOpen = (id, user) => {
     params.set("id", id);
@@ -132,14 +97,14 @@ function Medic() {
     const idu = queryParams.get("iduser");
     let val = document.getElementById("opciones").value;
     if (val == "Prioridad") {
-      val = true;
+      val = "true";
     } else {
-      val = false;
+      val = "false";
     }
     const formData = {
       iduser: idu,
       prioridad: val,
-      revision: true,
+      revision: "true",
       texto: document.getElementById("texto").value,
       historialid: idp,
     };
@@ -150,12 +115,34 @@ function Medic() {
         },
       })
       .then((res) => {
-        console.log("Enviado correctamente")
-      });
+        if (res.data.response == "Success") {
+          setError(res.data.message);
+          setopenS(true);
+          setOpen(false);
+        } else {
+          setError(res.data.message);
+          setopenE(true);
+          setOpen(false);
+        }
+      })
+      .catch((err) => {
+        setError(err);
+        setopenE(true);
+    });
+    console.log(openS, openE)
   }
-
   return (
     <>
+      <Snackbar open={openS} autoHideDuration={4000} onClose={CloseS}>
+        <Alert onClose={CloseS} severity="success" sx={{ width: '100%' }}>
+          ¡Se envio el diagnostico correctamente 😄!
+        </Alert>
+      </Snackbar>
+      <Snackbar open={openE} autoHideDuration={4000} onClose={CloseE}>
+        <Alert onClose={CloseE} severity="error" sx={{ width: '100%' }}>
+          Error al enviar el diagnostico 🙁.
+        </Alert>
+      </Snackbar>
       <Modal
         open={open}
         onClose={handleClose}
@@ -200,7 +187,7 @@ function Medic() {
                   id="texto"
                   required
                 ></textarea>
-                <button value="Enviar" className="primary-button" onClick={()=>diagnostico()}>
+                <button value="Enviar" className="primary-button" onClick={()=>{diagnostico()}}>
                   Enviar <BsSend />
                 </button>
               </div>
@@ -270,7 +257,7 @@ function Medic() {
                   </ul>
                 </div>
                 <div className="cards">
-                  {npacientes.map((elem, key) => (
+                  {pacientes.map((elem, key) => (
                     <div className="content-card" key={key}>
                       <div className="card">
                         <div className="card-izq">
@@ -304,7 +291,7 @@ function Medic() {
                 tabIndex="0"
               >
                 <div className="cards">
-                  {pacientes.map((elem, index) => (
+                  {npacientes.map((elem, index) => (
                     <div className="content-card" key={index}>
                       <div className="card">
                         <div className="card-izq">

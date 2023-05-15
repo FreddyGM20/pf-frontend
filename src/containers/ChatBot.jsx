@@ -4,6 +4,7 @@ import axios from "axios";
 import NavBar from "./NavBar";
 import "../styles/chatbot.css";
 import { Box } from "@mui/material";
+import bgHome from "../assets/BackgroundH.png"
 
 const ChatBot = () => {
   const URL = "http://25.78.142.190:3000";
@@ -161,9 +162,9 @@ const ChatBot = () => {
             // backgroundImage:  'repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #00a2ff, #444cf7 )',
             backgroundColor: "#e5e5f7",
             opacity: "0.8",
-            backgroundSize: "10px 10px",
+            backgroundSize: "100%",
             backgroundImage:
-              "repeating-linear-gradient(45deg, #444cf7 0, #444cf7 1px, #e5e5f7 0, #e5e5f7 50%)",
+              `url(${bgHome})`,
           }}
         >
           <div

@@ -4,21 +4,9 @@ import Header from "./NavBar";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import logot from "../assets/Logo azul.png";
-import Alert from '@mui/material/Alert';
-import Stack from '@mui/material/Stack';
-
-const users = [
-  {
-    email: "freddy@gmail.com",
-    contraseña: "123456",
-    isAdmin: false,
-  },
-  {
-    email: "admin@gmail.com",
-    contraseña: "123456",
-    isAdmin: true,
-  },
-];
+import Alert from "@mui/material/Alert";
+import Stack from "@mui/material/Stack";
+import { BsPersonFillAdd } from "react-icons/bs";
 
 const Login = () => {
   const URL = "http://25.78.142.190:3000";
@@ -29,27 +17,25 @@ const Login = () => {
     email: "",
     password: "",
   });
+  const [error, setError] = useState();
 
   function handle(e) {
     const userm = { ...user };
     userm[e.target.id] = e.target.value;
     setUser(userm);
-    console.log(userm);
   }
 
   function Submit(e) {
     e.preventDefault();
-    axios.post(`${URL}/medico/login`, user)
-    .then((res) => {
-      console.log(res.data.response)
+    axios.post(`${URL}/medico/login`, user).then((res) => {
       if (res.data.response == "Success") {
-        localStorage.setItem("token", res.data.token)
-        navigate('/medic')
-      }else{
-        document.getElementById("error").style.display = 'block'
+        localStorage.setItem("token", res.data.token);
+        navigate("/medic");
+      } else {
+        setError(res.data.message);
+        //ahora si mori ajajajaj heeelp!
       }
     });
-   
   }
   return (
     <>
@@ -59,9 +45,20 @@ const Login = () => {
         <div className="container-login">
           <img src={logot} alt="" className="logo" />
           <div className="form-container">
-          <Stack id="error" sx={{ display:"none",width: '100%',padding:"10px"}} spacing={2}>
-            <Alert severity="error">Error al iniciar sesion</Alert>
-          </Stack>
+            {error && (
+              //mani esperate
+              //dale
+              <Stack
+                sx={{ display: "block", width: "100%", padding: "10px" }}
+                spacing={2}
+              >
+                <Alert id="error" severity="error">
+                  {error}
+                </Alert>
+              </Stack>
+              //ishhhhhhhhhhhhhhhhhhhhhhhhhhhh HEY Y COMO SE HACE PA QUE SE VEA ASIU COLETO PILLLAAAA PA EL ENVIAR DIAGONSTICO
+            )}
+
             <form className="form" onSubmit={(e) => Submit(e)}>
               <label htmlFor="email" className="label">
                 Email address

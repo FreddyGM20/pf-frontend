@@ -1,6 +1,7 @@
 .chatBox{
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     padding: 30px 10px;
     gap: 20px;
     overflow-y: scroll;
