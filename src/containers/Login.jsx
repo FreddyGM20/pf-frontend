@@ -9,9 +9,8 @@ import Stack from "@mui/material/Stack";
 import { BsPersonFillAdd } from "react-icons/bs";
 
 const Login = () => {
-  const URL = "http://25.78.142.190:3000";
+  const URL = "http://contenedor-diagven-production.up.railway.app";
   const navigate = useNavigate();
-  const navegador = false;
 
   const [user, setUser] = useState({
     email: "",
@@ -56,7 +55,6 @@ const Login = () => {
                   {error}
                 </Alert>
               </Stack>
-              //ishhhhhhhhhhhhhhhhhhhhhhhhhhhh HEY Y COMO SE HACE PA QUE SE VEA ASIU COLETO PILLLAAAA PA EL ENVIAR DIAGONSTICO
             )}
 
             <form className="form" onSubmit={(e) => Submit(e)}>

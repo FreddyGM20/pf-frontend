@@ -23,7 +23,7 @@ const style = {
 
 function Medic() {
   const { id } = useParams();
-  const URL = "http://25.78.142.190:3000";
+  const URL = "http://contenedor-diagven-production.up.railway.app";
   const token = localStorage.getItem("token");
   const params = new URLSearchParams(window.location.search);
 

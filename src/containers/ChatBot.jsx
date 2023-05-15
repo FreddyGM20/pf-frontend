@@ -7,7 +7,7 @@ import { Box } from "@mui/material";
 import bgHome from "../assets/BackgroundH.png"
 
 const ChatBot = () => {
-  const URL = "http://25.78.142.190:3000";
+  const URL = "http://contenedor-diagven-production.up.railway.app";
   let [datosMessages, setdatosMessages] = useState([]);
   let [formData, setFormData] = useState({
     nombre: "",

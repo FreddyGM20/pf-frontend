@@ -48,10 +48,54 @@
         }
         button:hover{
             background-color: #555555;
+            
         }
 
     }
 }
+
+.floatButton{
+    font-size: 2rem;
+    border: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 0.398);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: #0d6efd;
+    position: absolute;
+    z-index: 10;
+    bottom: calc(0px + 10px);
+    right: calc(0px + 10px);
+}
+
+.floatButton:hover{
+    animation: float .5s infinite;
+}
+
+.openchat{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 11;
+}
+
+
+@keyframes float {
+    0%{
+        transform: scale(1);
+    }
+
+    0%{
+        transform: scale(1.2);
+    }
+
+    0%{
+        transform: scale(1);
+    }
+
+}
+
 
 @keyframes fadein {
     0%{
