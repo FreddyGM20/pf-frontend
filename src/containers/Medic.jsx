@@ -23,7 +23,7 @@ const style = {
 
 function Medic() {
   const { id } = useParams();
-  const URL = "https://contenedor-diagven-production.up.railway.app";
+  const URL = "https://diagven-api.onrender.com";
   const token = localStorage.getItem("token");
   const params = new URLSearchParams(window.location.search);
 
