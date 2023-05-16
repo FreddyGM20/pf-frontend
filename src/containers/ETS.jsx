@@ -80,7 +80,7 @@ function ETS() {
             <h1>Enfermedades de transmision sexual</h1>
           </div>
           <div className="container-papersc">
-          <Card sx={{ maxWidth: "85%" , height:"100%"}} elevation={10}>
+          <Card sx={{ maxWidth: "85%" , height:"290px"}} elevation={10}>
                 <CardContent>
                   <h5>Clamidia</h5>
                     <p>  La infección por clamidia es una ETS común que puede infectar tanto a los hombres como a las mujeres. Puede causar daños graves y permanentes en el aparato reproductor.
@@ -97,7 +97,7 @@ function ETS() {
                   </button>
                 </CardActions>
               </Card>
-              <Card sx={{ maxWidth: "85%" , height:"100%"}} elevation={10}>
+              <Card sx={{ maxWidth: "85%" , height:"290px"}} elevation={10}>
                 <CardContent>
                   <h5>Gonorrea</h5>
                   <p>es una infección causada por una bacteria de transmisión sexual que infecta tanto a hombres como a mujeres. La gonorrea afecta con mayor frecuencia la uretra.
@@ -114,7 +114,7 @@ function ETS() {
                   </button>
                 </CardActions>
               </Card>
-              <Card sx={{ maxWidth: "85%" , height:"100%"}} elevation={10}>
+              <Card sx={{ maxWidth: "85%" , height:"290px"}} elevation={10}>
                 <CardContent>
                   <h5>Herpes Genital</h5>
                   <p>
@@ -132,7 +132,7 @@ function ETS() {
                   </button>
                 </CardActions>
               </Card>
-              <Card sx={{ maxWidth: "85%" , height:"100%"}} elevation={10}>
+              <Card sx={{ maxWidth: "85%" , height:"290px"}} elevation={10}>
                 <CardContent>
                   <h5>Sifilis</h5>
                   <p>
@@ -150,7 +150,7 @@ function ETS() {
                   </button>
                 </CardActions>
               </Card>
-              <Card sx={{ maxWidth: "85%", height:"100%"}} elevation={10}>
+              <Card sx={{ maxWidth: "85%", height:"290px"}} elevation={10}>
                 <CardContent>
                   <h5>VIH/Sida</h5>
                   <p>

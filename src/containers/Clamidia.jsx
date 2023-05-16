@@ -11,7 +11,7 @@ function Clamidia() {
       <NavBar />
       <main className="MainInformacion">
         <div className="button-back">
-          <button className="btn btn-primary" onClick={()=> navigate('/informacion-ets')}><BsArrowLeftCircleFill/> Regresar</button>
+          <button className="btn btn-primary" onClick={() => navigate('/informacion-ets')}><BsArrowLeftCircleFill /> Regresar</button>
         </div>
         <div className="container-informacion">
           <div className="paper-informacion">
@@ -67,12 +67,14 @@ function Clamidia() {
           <div className="paper-informacion">
             <h1>Posibles tratamientos</h1>
             <p>La clamidia (Chlamydia trachomatis) se trata con antibióticos. Puede que recibas una dosis única, o puede que necesites tomar el medicamento diariamente o varias veces al día durante cinco o 10 días. En la mayoría de los casos, la infección se cura en una o dos semanas. Durante ese tiempo, debes abstenerse de tener relaciones sexuales. Tu pareja o parejas sexuales también necesitan recibir tratamiento aunque no presenten signos o síntomas. De lo contrario, la infección puede transmitirse entre las parejas sexuales.</p>
-            <div style={{display:"flex", width:"100%",alignItems:"start"}}>
-                <p>Recordatorio: Tener clamidia o haber sido tratado por ella en el pasado no impide que la contraigas de nuevo. </p>
+            <div style={{ display: "flex", width: "100%", alignItems: "start" }}>
+              <p>Recordatorio: Tener clamidia o haber sido tratado por ella en el pasado no impide que la contraigas de nuevo. </p>
             </div>
           </div>
           <div className="button-info">
-            <button className="btn btn-primary">Ver más información</button>
+            <form action="https://www.mayoclinic.org/es-es/diseases-conditions/chlamydia/symptoms-causes/syc-20355349">
+              <button className="btn btn-primary">Ver más información</button>
+            </form>
           </div>
         </div>
       </main>

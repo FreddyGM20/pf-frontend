@@ -9,7 +9,7 @@ import Stack from "@mui/material/Stack";
 import { BsPersonFillAdd } from "react-icons/bs";
 
 const Login = () => {
-  const URL = "https://contenedor-diagven-production.up.railway.app";
+  const URL = "https://diagven-api.onrender.com";
   const navigate = useNavigate();
 
   const [user, setUser] = useState({
