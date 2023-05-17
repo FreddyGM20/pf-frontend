@@ -67,8 +67,8 @@ function Clamidia() {
           <div className="paper-informacion1">
             <h1>Posibles tratamientos</h1>
             <p>La clamidia (Chlamydia trachomatis) se trata con antibióticos. Puede que recibas una dosis única, o puede que necesites tomar el medicamento diariamente o varias veces al día durante cinco o 10 días. En la mayoría de los casos, la infección se cura en una o dos semanas. Durante ese tiempo, debes abstenerse de tener relaciones sexuales. Tu pareja o parejas sexuales también necesitan recibir tratamiento aunque no presenten signos o síntomas. De lo contrario, la infección puede transmitirse entre las parejas sexuales.</p>
-            <div style={{display:"flex", width:"100%",alignItems:"start"}}>
-                <p>Recordatorio: Tener clamidia o haber sido tratado por ella en el pasado no impide que la contraigas de nuevo. </p>
+            <div style={{ display: "flex", width: "100%", alignItems: "start" }}>
+              <p>Recordatorio: Tener clamidia o haber sido tratado por ella en el pasado no impide que la contraigas de nuevo. </p>
             </div>
           </div>
           <div className="button-info1">
