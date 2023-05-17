@@ -97,14 +97,12 @@ const ChatBot = () => {
     }
   };
 
-  //pregunta anterior
-  // const prevQ = () => {
-  //   axios.put(`${URL}/respuestas/${idAnterior}`)
-  //   .then((res) => {
-  //     setdatosMessages([...datosMessages, res.data]);
-  //     console.log(res)
-  //   });
-  // }
+  function scrollToBottom (id) {
+    setTimeout(function(){
+      var div = document.getElementById(id);
+      div.scrollTop = div.scrollHeight + div.clientHeight;
+    },100)
+ }
 
   return (
     <>
@@ -177,17 +175,18 @@ const ChatBot = () => {
               flexDirection: "column",
             }}
           >
-            <div className="chatBox" style={{ height: "100%" }}>
+            <div id="chat"  onLoad={scrollToBottom("chat")} className="chatBox" style={{ height: "100%" }}>
               {/* chat */}
               {datosMessages.map((element) => (
                 <div
                   className={`${
                     element.autor === "BOT" ? "contentChat1" : "contentChat2"
-                  }`}
+                  }`} 
                 >
                   <div
                     className="chat"
                     id={`${element.autor === "BOT" ? "chat1" : "chat2"}`}
+                   
                   >
                     <p
                       style={{ color: "rgba(25,25,25,1)" }}
@@ -198,12 +197,13 @@ const ChatBot = () => {
                     <span className="contentButon">
                       {element.respuestas.map((el) => (
                         <button
-                          className="btn btn-outline-primary"
+                          className="btn btn-primary"
                           key={el.respuesta}
                           onClick={() => putRespuestas(el, element.id)}
                         >
                           {el.respuesta}
                         </button>
+                        
                       ))}
                       {/* {
                       idAnterior !== 0 &&
@@ -213,37 +213,6 @@ const ChatBot = () => {
                   </div>
                 </div>
               ))}
-            </div>
-            <div
-              className="options"
-              style={{ display: "flex", gap: "20px", marginBottom: "20px" }}
-            >
-              <input
-                type="text"
-                className="form-control"
-                id="text"
-                style={{ borderRadius: "30px" }}
-                onChange={({ target }) => {
-                  setChat((data) => ({
-                    ...data,
-                    pregunta: target.value,
-                  }));
-                }}
-              />
-              <button
-                className="btn btn-secondary"
-                style={{
-                  borderRadius: "30px",
-                  padding: "7px 15px",
-                  background: "#2b2b2bb2",
-                  fontWeight: "700",
-                  border: "0",
-                }}
-                onClick={() => addChat()}
-                autoFocus
-              >
-                Enviar
-              </button>
             </div>
           </div>
         </div>

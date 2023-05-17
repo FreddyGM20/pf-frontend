@@ -1,110 +1,111 @@
 .chatBox{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 30px 10px;
-    gap: 20px;
-    overflow-y: scroll;
-    margin: 10px 0;
-  }
-  
-  .chatBox::-webkit-scrollbar{
-    background: transparent;
-    width: 10px;
-  }
-  
-  .chatBox::-webkit-scrollbar-thumb{
-    background: #fff;
-    width: 10px;
-    border-radius: 20px;
-  }
-  
-  .chat{
-    width: 300px;
-    height: auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .contentChat1{
-    display: flex;
-    gap: 20px;
-    width: 100%;
-    justify-content: start;
-  }
-  
-  .contentChat2{
-    display: flex;
-    gap: 20px;
-    width: 100%;
-    justify-content: end;
-  }
-  
-  #chat1{
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    box-shadow: 10px 10px 58px -25px rgba(0,0,0,0.75);
-    background-color: #fff;
-  }
-  
-  #chat2{
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    background: #00a2ff;
-    box-shadow: 10px 10px 58px -25px rgba(0,0,0,0.75);
+  display: flex;
+  flex-direction: column;
+  padding: 30px 10px;
+  gap: 20px;
+  overflow-y: scroll;
+  margin: 10px 0;
+}
 
-  }
+.chatBox::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+.chatBox::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+}
+
+.chatBox::-webkit-scrollbar-thumb {
+  background-color: #0d6efd;
+  border-radius: 10px;
+}
+
+.chat{
+  width: 300px;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contentChat1{
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: start;
+}
+
+.contentChat2{
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: end;
+}
+
+#chat1{
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 10px 10px 58px -25px rgba(0,0,0,0.75);
+  background-color: #fff;
+}
+
+#chat2{
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: #00a2ff;
+  box-shadow: 10px 10px 58px -25px rgba(0,0,0,0.75);
+
+}
+
+.btn:hover{
+  transform: scale(1.04);
+  transform: .2s ease;
+}
+
+p{
+  margin: 0;
+}
+
+.contentButon{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px ;
+}
+
+.btn-primary{
   
-  .btn:hover{
-    transform: scale(1.04);
-    transform: .2s ease;
-  }
-  
-  p{
-    margin: 0;
-  }
-  
-  .contentButon{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px ;
-  }
-  
-  .btn-primary{
-    
-  }
-  
-  /* overlay */
-  
-  .overlay{
-    position: fixed; /* Sit on top of the page content */
-    display: flex; /* Hidden by default */
-    justify-content: center;
-    align-items: center;
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.68); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  }
-  
-  .boxRegister{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 300px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 10px 10px 34px -15px rgba(209, 209, 209, 0.75);
-  }
+}
+
+/* overlay */
+
+.overlay{
+  position: fixed; /* Sit on top of the page content */
+  display: flex; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.68); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.boxRegister{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 10px 10px 34px -15px rgba(209, 209, 209, 0.75);
+}
