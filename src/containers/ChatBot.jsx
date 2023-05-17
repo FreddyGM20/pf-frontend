@@ -8,7 +8,7 @@ import bgHome from "../assets/BackgroundH.png"
 
 
 const ChatBot = () => {
-  const URL = "https://diagven-api.onrender.com";
+  const URL = "https://contenedor-diagven-production.up.railway.app";
   let [datosMessages, setdatosMessages] = useState([]);
   let [formData, setFormData] = useState({
     nombre: "",
