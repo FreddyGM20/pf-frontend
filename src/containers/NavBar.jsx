@@ -2,6 +2,7 @@ import * as React from 'react';
 import "../styles/navBar.scss"
 //import images
 import logoH  from "../assets/Logo con letras.png"
+import logoM  from "../assets/Logo azul.png"
 import { Link, useNavigate } from "react-router-dom";
 
 

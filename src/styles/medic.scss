@@ -58,7 +58,7 @@
             bottom: 0;
             z-index: 10;
             .seleccionar{
-                width: 80.2%;
+                width: 100%;
             }
             .area-txt{
                 display:flex;
@@ -68,13 +68,25 @@
                 gap:8px;
                 .inputmessage{
                 width: 80%;
-                outline: 0;
+                border: 1px solid #ced4da;
+                border-radius: 0.375rem;
                 }
                 button{
                     width:19%
                 }
             }
             
+        }
+        @media (max-width: 700px){
+            .card-qr{
+                grid-template-columns: 1fr ;
+            }
+            button{
+                width:30%
+            }
+            .seleccionar{
+                width: 100%;
+            }
         }
     }
     .container-modal::-webkit-scrollbar {
@@ -251,17 +263,9 @@
         .buttonm{
             width: 100%;  
         }
+        
     }
 }
-.container-modalmedic{
-    display: flex;
-    flex-direction: column;
-    
-    background: #FFFFFF;
-    width: 80%;
-    height: 80%;
-}
-
 @keyframes fadein {
     0%{
         opacity: 1;
