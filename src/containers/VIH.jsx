@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
-import "../styles/ets.scss";
+import "../styles/informacion.scss";
 import { useNavigate } from "react-router-dom";
 import { BsArrowLeftCircleFill } from "react-icons/bs";
 

@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import logot from "../assets/Logo azul.png";
 import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
-import { BsPersonFillAdd } from "react-icons/bs";
 
 const Login = () => {
   const URL = "https://diagven-api.onrender.com";

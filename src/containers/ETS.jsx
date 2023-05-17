@@ -6,6 +6,16 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import { useNavigate } from "react-router-dom";
 
+const classes = {
+  maxWidth: "85%",
+  height: "100%",
+  borderRadius: "15px",
+  "@media(max-width:900px)": {
+    maxWidth: "100%",
+    height: "3000px",
+  },
+};
+
 function ETS() {
   const navigate = useNavigate();
   return (
@@ -80,95 +90,108 @@ function ETS() {
             <h1>Enfermedades de transmision sexual</h1>
           </div>
           <div className="container-papersc">
-          <Card sx={{ maxWidth: "85%" , height:"100%"}} elevation={10}>
-                <CardContent>
-                  <h5>Clamidia</h5>
-                    <p>  La infección por clamidia es una ETS común que puede infectar tanto a los hombres como a las mujeres. Puede causar daños graves y permanentes en el aparato reproductor.
-                    </p>
-                </CardContent>
-                <CardActions sx={{ justifyContent: "center"}}>
-                  <button
-                    type="button"
-                    className="btn btn-primary"
-                    style={{ width: "95%" }}
-                    onClick={()=>navigate("/clamidia")}
-                  >
-                    Ver más
-                  </button>
-                </CardActions>
-              </Card>
-              <Card sx={{ maxWidth: "85%" , height:"100%"}} elevation={10}>
-                <CardContent>
-                  <h5>Gonorrea</h5>
-                  <p>es una infección causada por una bacteria de transmisión sexual que infecta tanto a hombres como a mujeres. La gonorrea afecta con mayor frecuencia la uretra.
-                  </p>
-                </CardContent>
-                <CardActions sx={{ justifyContent: "center"}}>
-                  <button
-                    type="button"
-                    className="btn btn-primary"
-                    style={{ width: "95%" }}
-                    onClick={()=>navigate("/gonorrea")}
-                  >
-                    Ver más
-                  </button>
-                </CardActions>
-              </Card>
-              <Card sx={{ maxWidth: "85%" , height:"100%"}} elevation={10}>
-                <CardContent>
-                  <h5>Herpes Genital</h5>
-                  <p>
-                  es una enfermedad de transmisión sexual (ETS) común que puede contraer cualquier persona sexualmente activa. La mayoría de las personas con el virus no tiene síntomas. 
-                  </p>
-                </CardContent>
-                <CardActions sx={{ justifyContent: "center" }}>
-                  <button
-                    type="button"
-                    className="btn btn-primary"
-                    style={{ width: "95%" }}
-                    onClick={()=>navigate("/herpes-g")}
-                  >
-                    Ver más
-                  </button>
-                </CardActions>
-              </Card>
-              <Card sx={{ maxWidth: "85%" , height:"100%"}} elevation={10}>
-                <CardContent>
-                  <h5>Sifilis</h5>
-                  <p>
-                  La sífilis es una enfermedad de transmisión sexual (ETS) que puede tener complicaciones muy graves cuando se deja sin tratar, pero es fácil de curar con el tratamiento adecuado.
-                  </p>
-                </CardContent>
-                <CardActions sx={{ justifyContent: "center" }}>
-                  <button
-                    type="button"
-                    className="btn btn-primary"
-                    style={{ width: "95%" }}
-                    onClick={()=>navigate("/sifilis")}
-                  >
-                    Ver más
-                  </button>
-                </CardActions>
-              </Card>
-              <Card sx={{ maxWidth: "85%", height:"100%"}} elevation={10}>
-                <CardContent>
-                  <h5>VIH/Sida</h5>
-                  <p>
-                  El VIH es una infección de trasmisión sexual. También puede trasmitirse por el contacto con sangre infectada y por inyectarse drogas ilícitas o por compartir agujas.
-                  </p>
-                </CardContent>
-                <CardActions sx={{ justifyContent: "center" }}>
-                  <button
-                    type="button"
-                    className="btn btn-primary"
-                    style={{ width: "95%" }}
-                    onClick={()=>navigate("/vih")}
-                  >
-                    Ver más
-                  </button>
-                </CardActions>
-              </Card>
-            </div>
+            <Card sx={classes} elevation={10}>
+              <CardContent>
+                <h5>Clamidia</h5>
+                <p>
+                  {" "}
+                  La infección por clamidia es una ETS común que puede infectar
+                  tanto a los hombres como a las mujeres. Puede causar daños
+                  graves y permanentes en el aparato reproductor.
+                </p>
+              </CardContent>
+              <CardActions sx={{ justifyContent: "center" }}>
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  style={{ width: "95%" }}
+                  onClick={() => navigate("/clamidia")}
+                >
+                  Ver más
+                </button>
+              </CardActions>
+            </Card>
+            <Card sx={classes} elevation={10}>
+              <CardContent>
+                <h5>Gonorrea</h5>
+                <p>
+                  es una infección causada por una bacteria de transmisión
+                  sexual que infecta tanto a hombres como a mujeres. La gonorrea
+                  afecta con mayor frecuencia la uretra.
+                </p>
+              </CardContent>
+              <CardActions sx={{ justifyContent: "center" }}>
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  style={{ width: "95%" }}
+                  onClick={() => navigate("/gonorrea")}
+                >
+                  Ver más
+                </button>
+              </CardActions>
+            </Card>
+            <Card sx={classes} elevation={10}>
+              <CardContent>
+                <h5>Herpes Genital</h5>
+                <p>
+                  es una enfermedad de transmisión sexual (ETS) común que puede
+                  contraer cualquier persona sexualmente activa. La mayoría de
+                  las personas con el virus no tiene síntomas.
+                </p>
+              </CardContent>
+              <CardActions sx={{ justifyContent: "center" }}>
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  style={{ width: "95%" }}
+                  onClick={() => navigate("/herpes-g")}
+                >
+                  Ver más
+                </button>
+              </CardActions>
+            </Card>
+            <Card sx={classes} elevation={10}>
+              <CardContent>
+                <h5>Sifilis</h5>
+                <p>
+                  La sífilis es una enfermedad de transmisión sexual (ETS) que
+                  puede tener complicaciones muy graves cuando se deja sin
+                  tratar, pero es fácil de curar con el tratamiento adecuado.
+                </p>
+              </CardContent>
+              <CardActions sx={{ justifyContent: "center" }}>
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  style={{ width: "95%" }}
+                  onClick={() => navigate("/sifilis")}
+                >
+                  Ver más
+                </button>
+              </CardActions>
+            </Card>
+            <Card sx={classes} elevation={10}>
+              <CardContent>
+                <h5>VIH/Sida</h5>
+                <p>
+                  El VIH es una infección de trasmisión sexual. También puede
+                  trasmitirse por el contacto con sangre infectada y por
+                  inyectarse drogas ilícitas o por compartir agujas.
+                </p>
+              </CardContent>
+              <CardActions sx={{ justifyContent: "center" }}>
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  style={{ width: "95%" }}
+                  onClick={() => navigate("/vih")}
+                >
+                  Ver más
+                </button>
+              </CardActions>
+            </Card>
+          </div>
         </div>
       </main>
     </>

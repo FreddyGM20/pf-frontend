@@ -1,4 +1,4 @@
-.MainInformacion{
+.MainInformacion1{
     background: url('../assets/BackgroundH.png') no-repeat;
     background-size: cover;
     width: 100vw;
@@ -6,7 +6,7 @@
     margin-top: 80px;
     overflow-y: auto;
 
-    .container-informacion{
+    .container-informacion1{
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -17,7 +17,7 @@
         gap:50px;
         
     }
-    .paper-informacion{
+    .paper-informacion1{
         background-color: #ffffff;
         display: flex;
         flex-direction: column;
@@ -38,7 +38,7 @@
         text-align: justify;
     }
     }
-    .button-info{
+    .button-info1{
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -47,7 +47,7 @@
         align-items: center;
         padding: 30px;
     }
-    .button-back{
+    .button-back1{
         display: flex;
         flex-direction: row;
         padding: 35px;
@@ -56,7 +56,7 @@
         justify-content: start;
         align-items: center;
     }
-    .container-papersc{
+    .container-papersc1{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         place-items: center;
@@ -81,7 +81,7 @@
         align-items: center;
         height: 100%;
     }
-    .list-informacion{
+    .list-informacion1{
         display: flex;
         flex-direction: row;
         width: 95%;
@@ -90,7 +90,7 @@
         justify-content: center;
         align-items: center;
         
-        .papers-informacion{
+        .papers-informacion1{
         background-color: #ffffff;
         display: flex;
         flex-direction: column;
@@ -115,22 +115,22 @@
         }
     }
     @media only screen and (max-width: 900px) {
-        .container-informacion{
+        .container-informacion1{
             height: auto;
         }
-        .list-informacion{
+        .list-informacion1{
             flex-direction: column;
-            .papers-informacion {
+            .papers-informacion1 {
                 width: 100%;
             }
         }
-        .button-back button{
+        .button-back1 button{
             width: 100%;
         }
-        .button-info button{
+        .button-info1 button{
             width: 100%;
         }
-        .container-papersc{
+        .container-papersc1{
             display: flex;
             flex-direction: column;
             height: 1400px;
@@ -139,15 +139,15 @@
 
 
 }
-.MainInformacion::-webkit-scrollbar {
+.MainInformacion1::-webkit-scrollbar {
     width: 12px;               /* width of the entire scrollbar */
 }
   
-.MainInformacion::-webkit-scrollbar-track {
+.MainInformacion1::-webkit-scrollbar-track {
     background: rgb(255, 255, 255);
 }
   
-.MainInformacion::-webkit-scrollbar-thumb {
+.MainInformacion1::-webkit-scrollbar-thumb {
     background-color: #0d6efd;
     border-radius: 10px;
 }

@@ -6,6 +6,7 @@ import "../styles/chatbot.css";
 import { Box } from "@mui/material";
 import bgHome from "../assets/BackgroundH.png"
 
+
 const ChatBot = () => {
   const URL = "https://diagven-api.onrender.com";
   let [datosMessages, setdatosMessages] = useState([]);

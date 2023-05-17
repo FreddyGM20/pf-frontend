@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
-import "../styles/ets.scss";
+import "../styles/informacion.scss";
 import { useNavigate } from "react-router-dom";
 import { BsArrowLeftCircleFill } from "react-icons/bs";
 
@@ -9,8 +9,8 @@ function Herpes() {
   return (
     <>
       <NavBar />
-      <main className="MainInformacion">
-        <div className="button-back">
+      <main className="MainInformacion1">
+        <div className="button-back1">
           <button
             className="btn btn-primary"
             onClick={() => navigate("/informacion-ets")}
@@ -18,8 +18,8 @@ function Herpes() {
             <BsArrowLeftCircleFill /> Regresar
           </button>
         </div>
-        <div className="container-informacion">
-          <div className="paper-informacion">
+        <div className="container-informacion1">
+          <div className="paper-informacion1">
             <h1>¿Que es el Herpes Genital?</h1>
             <p>
             El herpes genital es una enfermedad de transmisión sexual (ETS) causada por el virus del herpes simple (VHS) tipo 1 o tipo 2. Esta infección se transmite a través del contacto sexual vaginal, anal u oral con una persona infectada. También puede transmitirse de madre a hijo durante el parto. Una vez que una persona ha sido infectada con el virus del herpes genital, este permanece en su cuerpo de por vida y puede causar brotes recurrentes de ampollas y llagas en los genitales, el ano y las áreas circundantes. Los síntomas pueden incluir dolor, picazón, ardor y hormigueo antes de que aparezcan las ampollas y llagas, y pueden durar de dos a cuatro semanas.
@@ -28,8 +28,8 @@ function Herpes() {
             Si bien el herpes genital no se puede curar, existen tratamientos que pueden ayudar a reducir la duración y la frecuencia de los brotes, así como aliviar los síntomas. Los tratamientos pueden incluir medicamentos antivirales que se toman de forma oral o se aplican en forma de crema tópica. La infección por herpes genital puede tener graves consecuencias para la salud. En las mujeres embarazadas, la infección puede provocar complicaciones durante el embarazo y el parto, como aborto espontáneo, parto prematuro y transmisión del virus al recién nacido. En las personas con un sistema inmunológico debilitado, como las personas con VIH/sida, el herpes genital puede ser más grave y más difícil de tratar.
             </p>
           </div>
-          <div className="list-informacion">
-            <div className="papers-informacion">
+          <div className="list-informacion1">
+            <div className="papers-informacion1">
               <h2>Los síntomas más comunes son:</h2>
               <div
                 style={{
@@ -61,7 +61,7 @@ function Herpes() {
                 </ul>
               </div>
             </div>
-            <div className="papers-informacion">
+            <div className="papers-informacion1">
               <h2>¿Como se puede diagnosticar?</h2>
               <ul>
                 <li>
@@ -71,7 +71,7 @@ function Herpes() {
               </ul>
             </div>
           </div>
-          <div className="paper-informacion">
+          <div className="paper-informacion1">
             <h1>Posibles tratamientos</h1>
             <div
                 style={{
@@ -100,7 +100,7 @@ function Herpes() {
                 </ul>
               </div>
           </div>
-          <div className="button-info">
+          <div className="button-info1">
             <button className="btn btn-primary">Ver más información</button>
           </div>
         </div>

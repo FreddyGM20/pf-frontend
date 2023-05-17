@@ -7,8 +7,8 @@ import Tooltip from "@mui/material/Tooltip";
 import { BsSend } from "react-icons/bs";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import Snackbar from '@mui/material/Snackbar';
-import Alert from '@mui/material/Alert';
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 
 const style = {
   position: "absolute",
@@ -36,14 +36,14 @@ function Medic() {
   const [error, setError] = useState();
 
   const CloseS = (event, reason) => {
-    if (reason === 'clickaway') {
+    if (reason === "clickaway") {
       return;
     }
 
     setopenS(false);
   };
   const CloseE = (event, reason) => {
-    if (reason === 'clickaway') {
+    if (reason === "clickaway") {
       return;
     }
 
@@ -55,7 +55,10 @@ function Medic() {
       setNRpacientes(...npacientes, res.data.datos);
     });
 
-    axios.post(`${URL}/medico/revisado`,{},
+    axios
+      .post(
+        `${URL}/medico/revisado`,
+        {},
         {
           headers: {
             Authorization: `Basic ${token}`,
@@ -64,21 +67,21 @@ function Medic() {
       )
       .then((res) => {
         setRpacientes(...pacientes, res.data.datos);
-        console.log(pacientes)
+        console.log(pacientes);
       });
   }, []);
-  console.log("npacientes",npacientes)
-  console.log("pacientes",pacientes)
+  console.log("npacientes", npacientes);
+  console.log("pacientes", pacientes);
   const [open, setOpen] = React.useState(false);
   const handleOpen = (id, user) => {
     params.set("id", id);
     params.set("iduser", user);
     const newUrl = `${window.location.pathname}?${params.toString()}`;
     window.history.pushState({}, "", newUrl);
-    axios.post(`${URL}/medico/seep`,{id:id}).then((res) => {
-        setPaciente(res.data.datos);
-        sethistorial(res.data.datos.historial)
-      });
+    axios.post(`${URL}/medico/seep`, { id: id }).then((res) => {
+      setPaciente(res.data.datos);
+      sethistorial(res.data.datos.historial);
+    });
     setOpen(true);
   };
   const handleClose = () => {
@@ -128,18 +131,18 @@ function Medic() {
       .catch((err) => {
         setError(err);
         setopenE(true);
-    });
-    console.log(openS, openE)
+      });
+    console.log(openS, openE);
   }
   return (
     <>
       <Snackbar open={openS} autoHideDuration={4000} onClose={CloseS}>
-        <Alert onClose={CloseS} severity="success" sx={{ width: '100%' }}>
+        <Alert onClose={CloseS} severity="success" sx={{ width: "100%" }}>
           ¡Se envio el diagnostico correctamente 😄!
         </Alert>
       </Snackbar>
       <Snackbar open={openE} autoHideDuration={4000} onClose={CloseE}>
-        <Alert onClose={CloseE} severity="error" sx={{ width: '100%' }}>
+        <Alert onClose={CloseE} severity="error" sx={{ width: "100%" }}>
           Error al enviar el diagnostico 🙁.
         </Alert>
       </Snackbar>
@@ -173,9 +176,7 @@ function Medic() {
                 id="opciones"
                 required
               >
-                <option selected>
-                  Seleccione el tipo de prioridad*
-                </option>
+                <option selected>Seleccione el tipo de prioridad*</option>
                 <option value="Prioridad">Prioridad</option>
                 <option value="Sin prioridad">Sin prioridad</option>
               </select>
@@ -187,7 +188,13 @@ function Medic() {
                   id="texto"
                   required
                 ></textarea>
-                <button value="Enviar" className="primary-button" onClick={()=>{diagnostico()}}>
+                <button
+                  value="Enviar"
+                  className="primary-button"
+                  onClick={() => {
+                    diagnostico();
+                  }}
+                >
                   Enviar <BsSend />
                 </button>
               </div>
@@ -199,36 +206,37 @@ function Medic() {
       <div className="MainMedic">
         <div className="container-medic">
           <div className="navbarList">
-            <ul className="nav nav-underline navitem">
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link active"
-                  id="home-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#home-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="home-tab-pane"
-                  aria-selected="true"
-                >
-                  Revisado
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link"
-                  id="profile-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#profile-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="profile-tab-pane"
-                  aria-selected="false"
-                >
-                  No revisado
-                </button>
-              </li>
-            </ul>
+            <div className="nav nav-underline navitem navposition">
+
+                <li className="nav-item" role="presentation">
+                  <button
+                    className="nav-link active"
+                    id="home-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#home-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="home-tab-pane"
+                    aria-selected="true"
+                  >
+                    Revisado
+                  </button>
+                </li>
+                <li className="nav-item" role="presentation">
+                  <button
+                    className="nav-link"
+                    id="profile-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#profile-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="profile-tab-pane"
+                    aria-selected="false"
+                  >
+                    No revisado
+                  </button>
+                </li> 
+            </div>
             <div className="container-tab tab-content" id="myTabContent">
               <div
                 className="tab-pane fade show active"
@@ -239,7 +247,7 @@ function Medic() {
               >
                 <div className="dropdown">
                   <a
-                    className="btn btn-primary dropdown-toggle"
+                    className="btn btn-primary dropdown-toggle buttonm"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -284,7 +292,7 @@ function Medic() {
                 </div>
               </div>
               <div
-                className="tab-pane fade"
+                className="tab-pane fade navlist"
                 id="profile-tab-pane"
                 role="tabpanel"
                 aria-labelledby="profile-tab"

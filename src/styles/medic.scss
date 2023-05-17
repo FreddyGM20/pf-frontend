@@ -89,6 +89,7 @@
         background-color: #0d6efd;
         border-radius: 10px;
     }
+
 }
 
 
@@ -133,6 +134,15 @@
         z-index: 10;
         position: sticky;
         box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 0.1);
+    }
+    .navposition{
+        display: flex;
+        flex-direction: row;
+        width: 20%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     .container-tab{
         margin-top: 10px;
@@ -219,6 +229,28 @@
     }
     li:hover{
         cursor:pointer;
+    }
+    @media (max-width: 700px){
+        .navposition{
+            width: 90%;
+        }
+        .card{
+            width: 100%;
+        }
+        .cards{
+            display: grid;
+            grid-template-columns: 1fr ;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+        .dropdown{
+            width: 100%;
+            margin-left: 0;
+        }
+        .buttonm{
+            width: 100%;  
+        }
     }
 }
 .container-modalmedic{

@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
-import "../styles/ets.scss";
+import "../styles/informacion.scss";
 import { useNavigate } from "react-router-dom";
 import { BsArrowLeftCircleFill } from "react-icons/bs";
 
@@ -9,8 +9,8 @@ function Gonorrea() {
   return (
     <>
       <NavBar />
-      <main className="MainInformacion">
-        <div className="button-back">
+      <main className="MainInformacion1">
+        <div className="button-back1">
           <button
             className="btn btn-primary"
             onClick={() => navigate("/informacion-ets")}
@@ -18,8 +18,8 @@ function Gonorrea() {
             <BsArrowLeftCircleFill /> Regresar
           </button>
         </div>
-        <div className="container-informacion">
-          <div className="paper-informacion">
+        <div className="container-informacion1">
+          <div className="paper-informacion1">
             <h1>¿Que es la Gonorrea?</h1>
             <p>
               La gonorrea es una enfermedad de transmisión sexual (ETS) causada
@@ -48,8 +48,8 @@ function Gonorrea() {
               riesgo de contraer el VIH y otras ETS.
             </p>
           </div>
-          <div className="list-informacion">
-            <div className="papers-informacion">
+          <div className="list-informacion1">
+            <div className="papers-informacion1">
               <h2>Los síntomas más comunes son:</h2>
               <div
                 style={{
@@ -83,7 +83,7 @@ function Gonorrea() {
                 </ul>
               </div>
             </div>
-            <div className="papers-informacion">
+            <div className="papers-informacion1">
               <h2>¿Como se puede diagnosticar?</h2>
               <div
                 style={{
@@ -118,7 +118,7 @@ function Gonorrea() {
               </ul>
             </div>
           </div>
-          <div className="paper-informacion">
+          <div className="paper-informacion1">
             <h1>Posibles tratamientos</h1>
             <p>
               Los adultos con gonorrea se tratan con antibióticos. Debido a las
@@ -142,7 +142,7 @@ function Gonorrea() {
               </p>
             </div>
           </div>
-          <div className="button-info">
+          <div className="button-info1">
             <button className="btn btn-primary">Ver más información</button>
           </div>
         </div>
