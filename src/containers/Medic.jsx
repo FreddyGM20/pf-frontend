@@ -85,8 +85,6 @@ function Medic() {
       .then((res) => {
         setRpacientes(...pacientes, res.data.datos);
         setPacientesFiltrados(...pacientes, res.data.datos);
-        console.log(pacientes);
-
         setLoading(false);
       });
 
@@ -109,9 +107,6 @@ function Medic() {
     setPacientesFiltrados(pacientesFiltrados);
   }, [filtros])
 
-
- // console.log("npacientes", npacientes);
- //  console.log("pacientes", pacientes);
   const [open, setOpen] = React.useState(false);
   const handleOpen = (id, user) => {
     params.set("id", id);
@@ -172,7 +167,6 @@ function Medic() {
         setError(err);
         setopenE(true);
       });
-    console.log(openS, openE);
   }
   return (
     <>

@@ -29,14 +29,11 @@ const ChatBot = () => {
     axios.get(`${URL}/preguntas/1`).then((res) => {
       setdatosMessages([...datosMessages, res.data]);
       setIdAnterior(res.data.id);
-      console.log(datosMessages);
-      console.log(res);
     });
   }
 
   //registroChat
   function Register() {
-    console.log(formData);
     axios.post(`${URL}/registro`, formData).then((res) => {
       if (res.data.Status === "Success") {
         localStorage.setItem("id", res.data.id);
@@ -46,20 +43,17 @@ const ChatBot = () => {
         document.getElementById("Error").style.display = "block";
         setMensajeError(res.data.message);
       }
-      console.log(res);
     });
   }
 
   //Responder
   const putRespuestas = (resPut, idPregunta) => {
     setIdAnterior(datosMessages[datosMessages.length - 1].id);
-    console.log(idAnterior);
     const respuesta = {
       id_pregunta: idPregunta,
       respuesta: resPut.respuesta,
       iduser: localStorage.getItem("id"),
     };
-    console.log(datosMessages);
     if (resPut.siguiente_pregunta === null) {
       setdatosMessages([
         ...datosMessages,
@@ -71,7 +65,6 @@ const ChatBot = () => {
           headers: { "Content-Type": "application/json" },
         })
         .then((res) => {
-          console.log(res);
           const datos = {
             id: 0,
             pregunta: resPut.respuesta,
@@ -79,7 +72,6 @@ const ChatBot = () => {
             respuestas: [],
           };
           setdatosMessages([...datosMessages, datos, res.data]);
-          console.log(datosMessages);
         });
     }
   };
