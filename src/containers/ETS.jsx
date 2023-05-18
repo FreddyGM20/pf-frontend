@@ -12,7 +12,7 @@ const classes = {
   borderRadius: "15px",
   "@media(max-width:900px)": {
     maxWidth: "100%",
-    height: "3000px",
+    height: "3000px"
   },
 };
 

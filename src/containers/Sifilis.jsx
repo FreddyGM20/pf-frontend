@@ -143,9 +143,9 @@ function Sifilis() {
               más de un año, puedes necesitar dosis adicionales.
             </p>
           </div>
-          <div className="button-info1">
+          <form className="button-info1" action="https://medlineplus.gov/spanish/syphilis.html">
             <button className="btn btn-primary">Ver más información</button>
-          </div>
+          </form>
         </div>
       </main>
     </>

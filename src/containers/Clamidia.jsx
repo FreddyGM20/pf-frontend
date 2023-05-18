@@ -11,7 +11,7 @@ function Clamidia() {
       <NavBar />
       <main className="MainInformacion1">
         <div className="button-back1">
-          <button className="btn btn-primary" onClick={()=> navigate('/informacion-ets')}><BsArrowLeftCircleFill/> Regresar</button>
+          <button className="btn btn-primary" onClick={() => navigate('/informacion-ets')}><BsArrowLeftCircleFill /> Regresar</button>
         </div>
         <div className="container-informacion1">
           <div className="paper-informacion1">
@@ -71,9 +71,9 @@ function Clamidia() {
               <p>Recordatorio: Tener clamidia o haber sido tratado por ella en el pasado no impide que la contraigas de nuevo. </p>
             </div>
           </div>
-          <div className="button-info1">
+          <form className="button-info1" action="https://medlineplus.gov/spanish/chlamydiainfections.html#:~:text=La%20clamidia%20es%20una%20enfermedad,no%20sepan%20que%20la%20tienen.">
             <button className="btn btn-primary">Ver más información</button>
-          </div>
+          </form>
         </div>
       </main>
     </>

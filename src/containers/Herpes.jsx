@@ -100,9 +100,9 @@ function Herpes() {
                 </ul>
               </div>
           </div>
-          <div className="button-info1">
+          <form className="button-info1" action="https://medlineplus.gov/spanish/ency/article/000857.htm">
             <button className="btn btn-primary">Ver más información</button>
-          </div>
+          </form>
         </div>
       </main>
     </>

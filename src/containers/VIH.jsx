@@ -116,9 +116,9 @@ function VIH() {
             </p>
             <p>La terapia antirretroviral suele ser una combinación de dos o más medicamentos de varias clases de fármacos diferentes. Este enfoque es el que más posibilidades tiene de reducir la cantidad de VIH en la sangre. Hay muchas opciones de terapia antirretroviral que combinan varios medicamentos para el VIH en un solo comprimido, que se toma una vez al día.</p>
           </div>
-          <div className="button-info">
+          <form className="button-info1" action="https://medlineplus.gov/spanish/hiv.html">
             <button className="btn btn-primary">Ver más información</button>
-          </div>
+          </form>
         </div>
       </main>
     </>
