@@ -94,9 +94,10 @@
         justify-content: start;
     }
 
-    @media (max-width: 700px){
+    @media (max-width: 900px){
         .container-estadistica{
             height: auto;
+            margin-top: 20px;
             gap:7px
         }
         .container-hestadistica{
