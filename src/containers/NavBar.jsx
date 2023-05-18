@@ -64,6 +64,12 @@ const NavBar = () => {
           </li>
 
           <li>
+            <a onClick={() => navigate("/chatbot")} className="title">
+              Chatbot
+            </a>
+          </li>
+
+          <li>
             <a onClick={() => navigate("/informacion-ets")} className="title">
               Informacion ETS
             </a>
