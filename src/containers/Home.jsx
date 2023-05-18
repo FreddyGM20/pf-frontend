@@ -16,12 +16,6 @@ function Home() {
       <NavBar />
       <main className="mainHome">
         <div className="content container">
-          <button type="button" className="floatButton" onClick={handleOpen}> <BsFillChatLeftFill /> </button>
-          {openchat &&
-            <div className="openchat">
-              <ChatBot />
-            </div>
-          }
           <div className="contents-cards">
             <div className="card">
               <img src={logo} alt="" />

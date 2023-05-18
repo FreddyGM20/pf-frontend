@@ -31,9 +31,22 @@ function Medic() {
   let [pacientes, setRpacientes] = useState([]);
   let [paciente, setPaciente] = useState({});
   let [historial, sethistorial] = useState([]);
+
   const [openS, setopenS] = useState(false);
   const [openE, setopenE] = useState(false);
   const [error, setError] = useState();
+  const [loading, setLoading] = useState(true);
+
+  const [filtros, setFiltros] = useState({ });
+  const [pacientesFiltrados, setPacientesFiltrados] = useState([]);
+
+  const handleFiltroPrioridad = (prioridad) => {
+    const newFiltros = Object.assign({}, filtros);
+
+    newFiltros.prioridad = prioridad;
+
+    setFiltros(newFiltros);
+  }
 
   const CloseS = (event, reason) => {
     if (reason === "clickaway") {
@@ -51,8 +64,12 @@ function Medic() {
   };
 
   useEffect(() => {
+    if (!loading) return;
+
     axios.get(`${URL}/medico/norevisado`).then((res) => {
       setNRpacientes(...npacientes, res.data.datos);
+
+      setLoading(false);
     });
 
     axios
@@ -67,11 +84,34 @@ function Medic() {
       )
       .then((res) => {
         setRpacientes(...pacientes, res.data.datos);
+        setPacientesFiltrados(...pacientes, res.data.datos);
         console.log(pacientes);
+
+        setLoading(false);
       });
-  }, []);
-  console.log("npacientes", npacientes);
-  console.log("pacientes", pacientes);
+
+
+  }, [loading]);
+
+  useEffect(() => {
+    const pacientesFiltrados = pacientes.filter(paciente => {
+      let cumpleFiltro = false;
+
+      for (const filtro in filtros) {
+        if (paciente[filtro] === filtros[filtro]) {
+          cumpleFiltro = true;
+        }
+      }
+      
+      if (cumpleFiltro) return paciente;
+    })
+
+    setPacientesFiltrados(pacientesFiltrados);
+  }, [filtros])
+
+
+ // console.log("npacientes", npacientes);
+ //  console.log("pacientes", pacientes);
   const [open, setOpen] = React.useState(false);
   const handleOpen = (id, user) => {
     params.set("id", id);
@@ -257,15 +297,18 @@ function Medic() {
 
                   <ul className="dropdown-menu">
                     <li>
-                      <a className="dropdown-item">Prioridad</a>
+                      <a className="dropdown-item" onClick={() => handleFiltroPrioridad(true) }>Prioridad</a>
                     </li>
                     <li>
-                      <a className="dropdown-item">Sin prioridad</a>
+                      <a className="dropdown-item" onClick={() => handleFiltroPrioridad(false)}>Sin prioridad</a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" onClick={() => setPacientesFiltrados(pacientes)}>Todos</a>
                     </li>
                   </ul>
                 </div>
                 <div className="cards">
-                  {pacientes.map((elem, key) => (
+                  {pacientesFiltrados.map((elem, key) => (
                     <div className="content-card" key={key}>
                       <div className="card">
                         <div className="card-izq">
