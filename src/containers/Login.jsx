@@ -25,15 +25,20 @@ const Login = () => {
 
   function Submit(e) {
     e.preventDefault();
-    axios.post(`${URL}/medico/login`, user).then((res) => {
-      if (res.data.response == "Success") {
-        localStorage.setItem("token", res.data.token);
-        navigate("/medic");
-      } else {
-        setError(res.data.message);
-        //ahora si mori ajajajaj heeelp!
-      }
-    });
+    axios
+      .post(`${URL}/medico/login`, {
+        email: user.email.toLowerCase(),
+        password: user.password,
+      })
+      .then((res) => {
+        if (res.data.response == "Success") {
+          localStorage.setItem("token", res.data.token);
+          navigate("/medic");
+        } else {
+          setError(res.data.message);
+          //ahora si mori ajajajaj heeelp!
+        }
+      });
   }
   return (
     <>
