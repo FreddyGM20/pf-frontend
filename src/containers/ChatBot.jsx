@@ -126,7 +126,7 @@ const ChatBot = () => {
                   }));
                 }}
               />
-              <button className="btn btn-success" onClick={() => Register()}>
+              <button className="btn btn-primary" onClick={() => Register()}>
                 Confirmar
               </button>
               <p
